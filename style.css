@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Arial';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #202020;
+    padding: 2rem;
+    font-family: 'Sigmar One', cursive;
+  }
+  
+  /* code {
+    font-family: Arial;
+  } */
+
+  h1 {
+    color: #FFDF6C;
+  }
+  
+  .app {
+    background: #209cee;
+    padding: 30px;
+    height: 100vh;
+  }
+  
+  .todo-list{
+    background: #FFFFFF;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 400px;
+  }
+  
+  .todo{
+
+    color: #FFFFFF;
+    background: #3F3F3F;
+    /* box-shadow: 1px 1px 1px rgba(0,0,0, 0.15); */
+    box-shadow: 1px 1px 1px #FFDF6C;
+    padding: 3px 10px;
+    font-size: 24px;
+    margin-bottom: 6px;
+    border-radius: 3px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .input{
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: none;
+    padding: 1rem;
+    height: 2.25em;
+    font-size: 24px;
+    font-family: 'Sigmar One', cursive;
+  }
