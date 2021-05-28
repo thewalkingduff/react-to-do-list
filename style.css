@@ -16,10 +16,28 @@ body {
 
   h1 {
     color: #FFDF6C;
+    text-align: center;
+  }
+
+  button {
+    color: #202020;
+    background: #FFDF6C;
+    padding: 0 .5rem;
+    margin: 0 1rem;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  img {
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
   }
   
   .app {
-    background: #209cee;
+    background: #FFFFFF;
     padding: 30px;
     height: 100vh;
   }
@@ -29,10 +47,10 @@ body {
     border-radius: 4px;
     padding: 5px;
     max-width: 400px;
+    overflow-wrap: break-word;
   }
   
   .todo{
-
     color: #FFFFFF;
     background: #3F3F3F;
     /* box-shadow: 1px 1px 1px rgba(0,0,0, 0.15); */
@@ -43,7 +61,13 @@ body {
     border-radius: 3px;
     display:flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    overflow-wrap: break-word;
+  }
+
+  .todo:hover {
+    background: #202020;
+    transition: .8s;
   }
   
   .input{
@@ -56,4 +80,23 @@ body {
     height: 2.25em;
     font-size: 24px;
     font-family: 'Sigmar One', cursive;
+    background: #FFDF6C;
+    color: #3F3F3F;
+    overflow-wrap: break-word;
+    opacity: .8;
+
+  }
+
+  .input:hover {
+    cursor: pointer;
+    opacity: 1;
+  }
+
+  ::placeholder {
+    color: #3F3F3F;
+  }
+
+  #list-icon {
+    text-align: center;
+    padding: 1rem 0 2rem;
   }

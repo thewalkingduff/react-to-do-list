@@ -9,7 +9,7 @@ function App() {
             isCompleted: false
         },
         {
-            text: 'build todo app',
+            text: 'build a to-do app',
             isCompleted: false
         },
         {
@@ -17,34 +17,27 @@ function App() {
             isCompleted: false
         }
     ]);
-    const [value, setValue] = React.useState('')
-    const handleSubmit = e => {
-        e.preventDefault()
-        if (!value) return
-        const newTodos = [...todos, { text: value, isCompleted: false }]
-        console.log(newTodos)
-        setTodos(newTodos)
-        setValue('')
 
+    const addTodo = text => {
+        const newTodos = [...todos, { text: text, isCompleted: false }]
+        setTodos(newTodos)
     }
 
+    const removeTodo = index => {
+        let tempTodos = [...todos]
+        tempTodos.splice(index, 1)
+        setTodos(tempTodos)
+    }
 
+    return (
+        <div className='app'>
+            {todos.map((todo, i) =>
+                <Todo todo={todo} index={i} key={i} remove={removeTodo} />
+            )}
+            <ToDoForm addTodo={addTodo} />
+        </div>
 
-    return (<>
-        {todos.map((todo, i) =>
-            <div className="todo" key={i}>{todo.text}</div>
-        )}
-        <form onSubmit={handleSubmit}>
-            <input
-                type='text'
-                className='input'
-                value={value}
-                placeholder="Add To-do :"
-                onChange={e => setValue(e.target.value)}
-            />
-        </form>
-
-    </>)
+    )
 
 }
 
